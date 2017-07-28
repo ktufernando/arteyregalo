@@ -35,8 +35,8 @@ $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
 $mail->Username = 'arteyregalostore@gmail.com';                 // SMTP username
 $mail->Password = '0002040600';                           // SMTP password
-$mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
-$mail->Port = 465;                                    // TCP port to connect to
+$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+$mail->Port = 587;                                    // TCP port to connect to
 
 $mail->setFrom('arteyregalostore@gmail.com', 'Mailer');
 $mail->addAddress('arteyregalostore@gmail.com');     // Add a recipient
