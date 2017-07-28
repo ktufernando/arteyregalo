@@ -25,8 +25,8 @@ $plan = strip_tags(htmlspecialchars($_POST['plan']));
    
 // Create the email and send the message
 $to = 'arteyregalostore@gmail.com'; // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to.
-$email_subject = "Contacto en la pagina de:  $name";
-$email_body = "Detalles:\n\nNombre: $name\n\nEmail: $email_address\n\nTelefono: $phone\n\nPlan: $plan\n\nMensaje:\n$message";
+$email_subject = "Contacto en la pagina de:  <strong>$name</strong>";
+$email_body = "Detalles:<br/>Nombre: $name<br/>Email: $email_address<br/>Telefono: $phone<br/>Plan: $plan<br/>Mensaje: $message";
 
 $mail = new PHPMailer;
 $mail->isSMTP();                                      // Set mailer to use SMTP
@@ -41,7 +41,7 @@ $mail->Port = 465;                                    // TCP port to connect to
 $mail->setFrom('arteyregalostore@gmail.com', 'Mailer');
 $mail->addAddress('arteyregalostore@gmail.com');     // Add a recipient
 $mail->addReplyTo($email_address);
-$mail->isHTML(false);                                  // Set email format to HTML
+$mail->isHTML(true);                                  // Set email format to HTML
 
 $mail->Subject = $email_subject;
 $mail->Body = $email_body;
