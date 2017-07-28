@@ -1,8 +1,4 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
 require '../vendor/phpmailer/phpmailer/PHPMailerAutoload.php';
 
 // Check for empty fields
@@ -48,11 +44,9 @@ $mail->Body = $email_body;
 $mail->AltBody = $email_body;
 
 if(!$mail->send()) {
-    echo 'mal';
     echo 'Mailer Error: ' . $mail->ErrorInfo;
     return false;
 } else {
-    echo 'bien';
     return true;
 }
 ?>
