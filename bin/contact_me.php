@@ -31,7 +31,7 @@ $email_body = "Detalles:\n\nNombre: $name\n\nEmail: $email_address\n\nTelefono: 
 $mail = new PHPMailer;
 $mail->isSMTP();                                      // Set mailer to use SMTP
 $mail->SMTPDebug = 1;
-$mail->Host = 'smtp.gmail.com;';  // Specify main and backup SMTP servers
+$mail->Host = 'gmail-smtp-msa.l.google.com';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
 $mail->Username = 'fervaldes11@gmail.com';                 // SMTP username
 $mail->Password = 'Ktufernando01';                           // SMTP password
