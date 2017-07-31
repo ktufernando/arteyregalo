@@ -34,15 +34,15 @@ Analytics.prototype.pageTrack = function(pageId){
 // Create analitics instance
 var analytics = new Analytics();
 
-$('#inicio').click(function() {
+$('#inicioMenu').click(function() {
     analytics.pageTrack("inicio");
 });
-$('#quienessomos').click(function() {
+$('#quienessomosMenu').click(function() {
     analytics.pageTrack("quienessomos");
 });
-$('#servicios').click(function() {
+$('#serviciosMenu').click(function() {
     analytics.pageTrack("servicios");
 });
-$('#contacto').click(function() {
+$('#contactoMenu').click(function() {
     analytics.pageTrack("contacto");
 });
