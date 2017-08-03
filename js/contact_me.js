@@ -23,6 +23,7 @@ $(function() {
             if (firstName.indexOf(' ') >= 0) {
                 firstName = name.split(' ').slice(0, -1).join(' ');
             }
+            analytics.mailTrack();
             $.ajax({
                 url: "./bin/contact_me.php",
                 type: "POST",
@@ -46,6 +47,8 @@ $(function() {
 
                     //clear all fields
                     $('#contactForm').trigger("reset");
+
+                    analytics.okMailTrack();
                 },
                 error: function() {
                     // Fail message
@@ -56,6 +59,8 @@ $(function() {
                     $('#success > .alert-danger').append('</div>');
                     //clear all fields
                     $('#contactForm').trigger("reset");
+
+                    analytics.errorMailTrack();
                 },
             })
         },
